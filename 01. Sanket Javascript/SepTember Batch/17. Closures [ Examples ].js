@@ -13,7 +13,8 @@ test();
 // EXAMPLE - 2
 
 const add = (function () {
-  let counter = 0;
+  // doesn't matter here it is let or var since, var has functional scope as well
+  var counter = 0;
   return function () {
     counter += 1;
     return counter;
@@ -23,4 +24,4 @@ add();
 add();
 const answer = add();
 console.log({ answer });
-console.log({ counter }); // This will give ReferenceError
+// console.log({ counter }); // This will give ReferenceError
