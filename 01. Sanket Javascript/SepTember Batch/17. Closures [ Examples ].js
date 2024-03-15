@@ -3,8 +3,8 @@
 function test() {
   for (var i = 0; i < 3; i++) {
     setTimeout(function exec() {
-      let count = i;
-      console.log(`i: ${count}`);
+      //   let count = i;      let count = i
+      console.log(`i: ${i}`);
     }, i * 1000);
   }
 }
@@ -24,4 +24,6 @@ add();
 add();
 const answer = add();
 console.log({ answer });
+// add = null; Releasing the reference, prevent memory leak
+console.log(add());
 // console.log({ counter }); // This will give ReferenceError
