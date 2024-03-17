@@ -32,14 +32,14 @@ function uploadData(file, url) {
 }
 
 let downloadPromise = fetchData("www.google.com");
-downloadPromise
-  .then(function processDownload(value) {
-    console.log("downloding done with following value", value);
-    return value;
-  })
-  .then(function processWrite(value) {
-    return writeFile(value);
-  })
-  .then(function processUpload(value) {
-    return uploadData(value, "www.google.com");
-  });
+console.log(downloadPromise);
+downloadPromise.then(function processDownload(value) {
+  console.log("downloding done with following value", value);
+  // return value;
+});
+// .then(function processWrite(value) {
+//   return writeFile(value);
+// })
+// .then(function processUpload(value) {
+//   return uploadData(value, "www.google.com");
+// });
