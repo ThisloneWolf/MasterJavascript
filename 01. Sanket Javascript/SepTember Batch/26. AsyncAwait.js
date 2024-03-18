@@ -9,8 +9,8 @@ function fetchData(url) {
       let data = "Dummy download data";
       console.log("download complete");
       resolve(data);
-      return new Promise();
     }, 4000);
+    resolve(123);
     console.log("Timer to mimic download started");
   });
 }
@@ -39,7 +39,6 @@ function uploadData(file, url) {
 
 async function processing() {
   let downloadedData = await fetchData("www.google.com");
-  downloadedData.then((value) => console.log(value));
   console.log("Downloading await completed");
   let file = await writeFile(downloadedData);
   console.log("Writing await completed");
