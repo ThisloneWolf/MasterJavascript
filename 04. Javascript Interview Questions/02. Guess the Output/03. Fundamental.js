@@ -28,3 +28,11 @@ function sum(a, b) {
 console.log(sum()); // NaN
 
 [1, 2, 3].forEach(console.log);
+
+// Questons - 1
+const num = () => console.log(typeof arguments); // undefined, arrow function doesn't have arguments
+
+// Normal function declaration have arguments object inbuilt
+function f() {
+  console.log(typeof arguments); // object
+}
